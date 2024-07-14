@@ -1,0 +1,22 @@
+name: Py Test
+
+on: 
+  branch_protection_rule:
+    types: [created, deleted, edited]
+
+jobs:
+  one:
+    runs-on:
+      - dev
+    steps:
+      - uses: actions/checkout@v4
+      - name: Step One
+        run: echo "One"
+
+  two:
+    runs-on:
+    - dev
+    steps:
+      - uses: actions/checkout@v4
+      - name: Step One
+        run: echo "Two"
