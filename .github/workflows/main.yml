@@ -1,6 +1,8 @@
 name: Py Test
 
-on: 
+on:
+  push:
+  pull_request:
   branch_protection_rule:
     types: [created, deleted, edited]
 
